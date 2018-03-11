@@ -1,0 +1,119 @@
+h1.product-name {
+  text-transform: capitalize;
+}
+body {
+	font-family: "Courier New", Courier, mono;
+	font-size: 12px;
+	color:#000000;
+	margin: 0;;
+	padding: 0;
+	width: 100%;
+	margin-right: auto;
+	text-align: left;
+	position:absolute;
+}
+
+.myFooter {
+  margin-top: 20px;
+  margin-left: 20px;
+ margin-bottom: 10px;
+}
+
+#about {
+	 width: 300px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+
+
+#about a:link,a:visited, a:active  {color:#000000; text-decoration: none;}
+#about a:hover {color:#000000; background-color: #000000;}
+
+
+.tabs-animated {
+  overflow: hidden;
+}
+
+
+
+
+
+.nav-tabs {
+   border: 0;
+    padding: 15px 0.7rem;
+}
+
+.nav-tabs>.nav-item>.nav-link {
+    color: #888;
+    margin: 0;
+    margin-right: 5px;
+    background-color: transparent;
+    
+    font-size: 14px;
+    padding: 11px 23px;
+    line-height: 1.5;
+}
+
+.nav-tabs>.nav-item>.nav-link:hover {
+    background-color: transparent;
+      border-color: #fff;
+}
+
+.nav-tabs>.nav-item>.nav-link.active {
+    border-bottom: 1px solid #888;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    
+}
+
+.nav-tabs>.nav-item>.nav-link i.now-ui-icons {
+    font-size: 14px;
+    position: relative;
+    top: 1px;
+    margin-right: 3px;
+}
+
+.nav-tabs>.nav-item.disabled>.nav-link,
+.nav-tabs>.nav-item.disabled>.nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-tabs.nav-tabs-primary>.nav-item>.nav-link.active {
+    color: #000;
+}
+
+[data-background-color] .nav-tabs>.nav-item>.nav-link i.now-ui-icons {
+    color: #FFFFFF;
+}
+
+
+
+.nav-item .nav-link,
+.nav-tabs .nav-link {
+    -webkit-transition: all 1200ms ease 0s;
+    -moz-transition: all 1200ms ease 0s;
+    -o-transition: all 1200ms ease 0s;
+    -ms-transition: all 1200ms ease 0s;
+    transition: all 1200ms ease 0s;
+}
+
+
+@media screen and (max-width: 768px) {
+   
+    .nav-tabs {
+        display: inline-block;
+        width: 100%;
+        padding-left: 100px;
+        padding-right: 100px;
+        text-align: center;
+    }
+    .nav-tabs .nav-item>.nav-link {
+        margin-bottom: 5px;
+    }
+}
+
+
+
+

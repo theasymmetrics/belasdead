@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Belasdead">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Belasdead">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Belasdead">
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <title>Belasdead</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">  
+  <link rel="stylesheet" type="text/css" href="css/bela.css"> 
+  
+</head>
+
+<body>
+
+   <div style="margin: 50px">
+    <h2>
+      <span><img src="images/title.png" alt="bela's dead" width="327" height="56" border="0" /></span>
+    </h2>
+  </div>
+
+
+
+<div class="tabs-animated">
+
+    <ul class="nav nav-tabs nav-tabs-primary" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home" role="tab">HOME</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#art" role="tab">ART</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#lingerie" role="tab">LINGERIE</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#about" role="tab">ABOUT</a>
+      </li>
+
+    </ul>
+    
+
+    <div>
+      <div class="tab-content">
+        
+        <div class="tab-pane active" id="home" role="tabpanel">
+          <img src="images/home01.jpg" alt="bela's dead" style="width: 60%;"/>
+        </div>
+        
+        <div class="tab-pane" id="art" role="tabpanel">
+          <div id="instafeed"></div>
+        </div>
+        
+        <div class="tab-pane" id="lingerie" role="tabpanel">
+          <div>
+            <img src="images/collection/01.jpg" alt="bela's dead" style="width: 30%; margin-bottom:10px"/>
+            <img src="images/collection/02.jpg" alt="bela's dead" style="width: 30%; margin-bottom:10px"/>
+            <img src="images/collection/03.jpg" alt="bela's dead" style="width: 30%; margin-bottom:10px"/>
+          </div>
+          <div>
+            <img src="images/collection/04.jpg" alt="bela's dead" style="width: 30%; margin-bottom:10px"/>
+            <img src="images/collection/05.jpg" alt="bela's dead" style="width: 30%; margin-bottom:10px"/>
+            <img src="images/collection/06.jpg" alt="bela's dead" style="width: 30%; margin-bottom:10px"/>
+          </div>
+          <div>
+            <img src="images/collection/07.jpg" alt="bela's dead" style="width: 30%; margin-bottom:10px"/>
+            <img src="images/collection/08.jpg" alt="bela's dead" style="width: 30%; margin-bottom:10px"/>
+            <img src="images/collection/09.jpg" alt="bela's dead" style="width: 30%; margin-bottom:10px"/>
+          </div>
+        </div>
+                                        
+        <div class="tab-pane" id="about" role="tabpanel">
+          <p>
+            Bela’s Dead is a lingerie label that merges ideas of elegance and strength to form imaginative, devious and seductive underwear designs. Inspired by Nick Cave songs about murder and lost love, the art and performance of being a woman, and other musicians such as Siouxsie and the Banshees and The Jesus and Mary Chain, Bela’s Dead creates sensual pieces with dark undertones.
+            <br><br>
+            “I like the idea of putting something spooky into luxury lingerie. It adds a slightly unnerving quality to it,” says designer Jo Lynch.
+            <br><br>
+            Working closely with Finnish illustrator <a href="http://www.klaush.com" target="_blank">Klaus Haapaniemi</a>, his extra-ordinary, story telling artwork features in each collection.
+            <br><br>
+            The latest takes inspiration from the forbidden fruit and The Garden of Eden, anatomical floral drawings and the threatening side of nature.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+
+<p class="myFooter">Built with love by <a href="https://soundcloud.com/theasymmetrics" target="_blank"><u>The Asymmetrics.</u></a> The sky's the limit © 2018 and beyond.</p>
+
+  
+ 
+    <script type="text/javascript" src="js/jquery.3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    
+    <script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '618067474',
+        limit: 50,
+        resolution: 'standard_resolution',
+        template: '<a href="{{link}}"><img src="{{image}}" alt="belas dead" style="width: 30%; margin-bottom:10px; margin-right:10px" /></a>',
+        accessToken: '618067474.1677ed0.a70e829ed1504f939176a5e285d370e2'    
+    });
+    feed.run();
+
+
+
+    $('a[data-toggle="tab"]').on('hide.bs.tab', function (e) {
+    var $old_tab = $($(e.target).attr("href"));
+    var $new_tab = $($(e.relatedTarget).attr("href"));
+
+    if($new_tab.index() < $old_tab.index()){
+      $old_tab.css('position', 'relative').css("left", "0").show();
+      $old_tab.animate({"left":"-100%"}, 0, function () {
+        $old_tab.css("left", 0).removeAttr("style");
+      });
+    }
+    else {
+      $old_tab.css('position', 'relative').css("right", "0").show();
+      $old_tab.animate({"right":"-100%"}, 0, function () {
+        $old_tab.css("right", 0).removeAttr("style");
+      });
+    }
+  });
+
+  $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+    var $new_tab = $($(e.target).attr("href"));
+    var $old_tab = $($(e.relatedTarget).attr("href"));
+
+    if($new_tab.index() > $old_tab.index()){
+      $new_tab.css('position', 'relative').css("left", "-2500px");
+      $new_tab.animate({"left":"0"}, 600);
+    }
+    else {
+      $new_tab.css('position', 'relative').css("right", "-2500px");
+      $new_tab.animate({"right":"0"}, 600);
+    }
+  }); 
+</script> 
+    
+</body>
+</html>
